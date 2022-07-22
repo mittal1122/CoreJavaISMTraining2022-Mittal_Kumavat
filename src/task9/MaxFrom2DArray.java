@@ -4,7 +4,7 @@ package task9;
 
 import java.util.Scanner;
 
-public class MaxFrom2DArray {
+public class MaxFrom2DArray {	
 	Scanner snr = new Scanner(System.in);
 	int a = 3;
 	int no1[][] = new int[a][a];
