@@ -1,0 +1,38 @@
+Q - why ArrayList ? how it works internally ?  what if it overflow or it is possible?
+	what is the max size of ArrayList?
+
+
+A - When ArrayList is declared and initialized using the default constructor, memory space for 10 elements is created.
+	 Now, when I add an 11th element it Will new memory space be created with 20 (or more) element capacity
+	 (this requires copying elements from 1st memory location to new location)
+
+	Internally an ArrayList uses an Object[] . 
+
+	>> is right shift operator which reduces a number to its half. Thus,
+	int newCapacity = oldCapacity + (oldCapacity >> 1); int newCapacity = oldCapacity + 0.5*oldCapacity;
+	int newCapacity = 1.5*oldCapacity ;
+	
+
+	int newCapacity then = 10 + (10 >> 1) = 15.
+
+Vector class in java is 10 and similarly ArrayList also have it's default capacity 10. 
+
+LinkedList = no intial capacity
+
+HashMap,LinkedHashMap,ConcurrentHashMap,HashSet,LinkedHashSet = 16
+
+TreeSet = empty
+
+
+		default		growth
+
+vector		10		implementation-dependent
+priorityqueue	11		automatically grow
+map 		16
+
+
+max size of arraylist,hashset in java = 2^31
+
+max size of linkedlist,treemap in java = 2^31 - 1
+
+max size of map,hashmap in java = 2^30
